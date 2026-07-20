@@ -1,27 +1,27 @@
 # 📊 E-Commerce Sales Analytics
 
-An end-to-end E-Commerce Sales Analytics project built using **Python, SQL, and Jupyter Notebook**. This project demonstrates how raw transactional data can be transformed into meaningful business insights through data integration, SQL-based analysis, and KPI dashboards.
+An end-to-end **E-Commerce Sales Analytics** project built using **Python, SQL, Pandas, Matplotlib, and Jupyter Notebook**. This project demonstrates how raw transactional data can be transformed into actionable business insights through data integration, SQL-based analysis, KPI reporting, and data visualization.
 
 ---
 
 # 📌 Project Overview
 
-This project analyzes a real-world Brazilian e-commerce dataset containing over **100,000 orders**, customer information, sellers, products, payments, and order details.
+This project analyzes a real-world Brazilian e-commerce dataset containing **approximately 100,000 customer orders**, along with customer, product, seller, payment, and geolocation information.
 
-The project covers the complete analytics workflow:
+The complete analytics workflow includes:
 
 - Importing CSV datasets into MySQL
 - Database creation and data integration
 - Business-oriented SQL analysis
-- Executive KPI Dashboard
+- Executive KPI dashboard generation
 - Data visualization using Python
-- Business insights for decision-making
+- Business insight generation for decision-making
 
 ---
 
 # 📂 Dataset
 
-The project uses the Brazilian Olist E-Commerce Dataset.
+The project uses the **Brazilian Olist E-Commerce Dataset**.
 
 ### Tables Used
 
@@ -33,15 +33,15 @@ The project uses the Brazilian Olist E-Commerce Dataset.
 - Sellers
 - Geolocation
 
-Dataset Size
+### Dataset Summary
 
 | Table | Records |
-|--------|---------|
+|--------|---------:|
 | Customers | 99,441 |
 | Orders | 99,441 |
-| Products | 32,951 |
-| Payments | 103,886 |
 | Order Items | 112,650 |
+| Payments | 103,886 |
+| Products | 32,951 |
 | Sellers | 3,095 |
 | Geolocation | 1,000,163 |
 
@@ -55,6 +55,7 @@ Dataset Size
 - Pandas
 - Matplotlib
 - Jupyter Notebook
+- mysql-connector-python
 
 ---
 
@@ -62,25 +63,25 @@ Dataset Size
 
 ```
 ecommerce-sales-analytics/
-
 │
 ├── dataset/
-│ ├── customers.csv
-│ ├── orders.csv
-│ ├── products.csv
-│ ├── payments.csv
-│ ├── sellers.csv
-│ ├── order_items.csv
-│ └── geolocation.csv
+│   ├── customers.csv
+│   ├── orders.csv
+│   ├── order_items.csv
+│   ├── payments.csv
+│   ├── products.csv
+│   ├── sellers.csv
+│   ├── geolocation.csv
+│   └── product_category_name_translation.csv
 │
 ├── notebooks/
-│ ├── Data_Import_to_MySQL.ipynb
-│ └── ECommerce_Sales_Analytics.ipynb
+│   ├── Data_Import_to_MySQL.ipynb
+│   └── ECommerce_Sales_Analytics.ipynb
 │
 ├── sql/
-│ ├── database_schema.sql
-│ ├── data_import.sql
-│ └── business_queries.sql
+│   ├── database_schema.sql
+│   ├── data_import.sql
+│   └── business_queries.sql
 │
 └── README.md
 ```
@@ -93,7 +94,7 @@ ecommerce-sales-analytics/
 CSV Files
      │
      ▼
-Python (Pandas)
+Data Loading using Pandas
      │
      ▼
 MySQL Database
@@ -102,134 +103,130 @@ MySQL Database
 SQL Business Queries
      │
      ▼
-KPI Calculation
+Business KPIs
      │
      ▼
-Executive Dashboard & Insights
+Python Visualizations
+     │
+     ▼
+Executive Dashboard
 ```
 
 ---
 
-# 📈 Business Analysis Performed
+# 📊 Business Analysis
 
-The project includes business-focused SQL analyses such as:
+The project includes **20+ SQL business queries** covering various business scenarios such as:
 
 - Total Revenue
+- Total Orders
 - Average Order Value
 - Monthly Revenue Trend
-- Top Selling Products
-- Top Performing Sellers
+- Monthly Order Trend
+- Customer Purchase Frequency
 - Customer Lifetime Value
 - Customer Retention Analysis
+- Top Selling Products
+- Top Performing Sellers
+- Product Category Performance
 - Payment Method Distribution
-- Order Status Analysis
 - Revenue by State
 - Revenue by City
-- Seller Performance
-- Product Category Performance
-- Highest Revenue Orders
-- Order Volume Analysis
-- Customer Purchase Frequency
-- Revenue Contribution Analysis
 - Geographic Sales Distribution
-- Order Item Analysis
-- Business KPI Reporting
-
-A total of **20+ SQL business queries** were executed to generate insights.
+- Order Status Analysis
+- Revenue Contribution Analysis
+- Seller Performance
+- Product Demand Analysis
+- Executive KPI Reporting
 
 ---
 
-# 📊 Executive KPI Dashboard
+# 📈 Executive KPI Dashboard
 
-The project includes an executive dashboard summarizing key business metrics.
+The project generates an Executive KPI Dashboard summarizing important business metrics.
 
-Main KPIs include:
+### KPIs
 
 - Total Orders
 - Total Customers
 - Total Sellers
 - Total Products
-- Revenue (Million BRL)
-- Average Order Value
-
-> Dashboard screenshots can be found in the **images/** folder.
+- Total Revenue (Million BRL)
+- Average Order Value (BRL)
 
 ---
 
 # 📌 Key Insights
 
-- Processed more than **100K customer orders**
-- Generated over **16 Million BRL** in total revenue
-- Calculated average order value for business monitoring
-- Identified top-performing sellers and products
-- Analyzed customer purchasing behavior
-- Evaluated payment preferences
-- Generated business KPIs for executive reporting
+- Processed approximately **100K e-commerce orders**
+- Generated approximately **16.01 Million BRL** in total revenue
+- Achieved an average order value of **154.10 BRL**
+- Identified top-performing sellers based on revenue
+- Analyzed customer purchasing behavior and payment methods
+- Evaluated product and regional sales performance
+- Generated executive KPIs to support business decision-making
 
 ---
 
 # 🚀 How to Run
 
-## Clone Repository
+## 1. Clone Repository
 
 ```bash
 git clone https://github.com/DevendraKumar577/ecommerce-sales-analytics.git
 ```
 
-## Install Dependencies
+## 2. Install Required Libraries
 
 ```bash
 pip install pandas matplotlib mysql-connector-python
 ```
 
-## Create MySQL Database
+## 3. Create Database
 
-Run:
-
-```
-sql/database_schema.sql
-```
-
-## Import Dataset
-
-Execute:
+Run the notebook:
 
 ```
 notebooks/Data_Import_to_MySQL.ipynb
 ```
 
-## Perform Analysis
+This notebook creates the MySQL database and imports all CSV files into their respective tables.
 
-Run:
+## 4. Run Analysis
+
+Execute:
 
 ```
 notebooks/ECommerce_Sales_Analytics.ipynb
 ```
 
+This notebook performs SQL-based business analysis, generates KPIs, and creates visualizations.
+
 ---
 
-# 📊 Skills Demonstrated
+# 💡 Skills Demonstrated
 
 - Data Cleaning
 - Data Integration
-- SQL
-- MySQL
-- Python
+- SQL Query Writing
+- Database Management
 - Business Analytics
 - KPI Reporting
+- Exploratory Data Analysis (EDA)
 - Data Visualization
 - Analytical Thinking
 
 ---
 
-# 📌 Future Improvements
+# 🎯 Business Value
 
-- Interactive Power BI Dashboard
-- Streamlit Web Application
-- Predictive Sales Forecasting
-- Customer Segmentation
-- Product Recommendation System
-- Real-Time Dashboard
+This project demonstrates how SQL and Python can be combined to:
+
+- Analyze large transactional datasets
+- Track key business KPIs
+- Monitor customer behavior
+- Identify high-performing sellers and products
+- Support strategic business decisions through data
 
 ---
 
@@ -240,5 +237,5 @@ notebooks/ECommerce_Sales_Analytics.ipynb
 B.Tech, Materials & Metallurgical Engineering  
 MANIT Bhopal
 
-GitHub:
+GitHub:  
 https://github.com/DevendraKumar577
