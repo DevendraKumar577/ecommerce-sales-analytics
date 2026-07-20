@@ -1,6 +1,6 @@
 # 📊 E-Commerce Sales Analytics
 
-An end-to-end E-Commerce Sales Analytics project built using **Python, MySQL, SQL, and Jupyter Notebook**. This project demonstrates how raw transactional data can be transformed into meaningful business insights through data integration, SQL-based analysis, and KPI dashboards.
+An end-to-end E-Commerce Sales Analytics project built using **Python, SQL, and Jupyter Notebook**. This project demonstrates how raw transactional data can be transformed into meaningful business insights through data integration, SQL-based analysis, and KPI dashboards.
 
 ---
 
